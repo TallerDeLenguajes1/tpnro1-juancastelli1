@@ -15,7 +15,8 @@ namespace TP01
                     return tarea;
                 }
             }
-            return null;
+            Console.WriteLine("No Se Encontro la Tarea");
+            return new Tareas();
         }
         public static int ContarPosicion(int idTarea, List<Tareas> listatarea)
         {
@@ -39,7 +40,8 @@ namespace TP01
                     return tarea;
                 }
             }
-            return null;
+            Console.WriteLine("No Se Encontro la Tarea");
+            return new Tareas();
         }
     }
 }

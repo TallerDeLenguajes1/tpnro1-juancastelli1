@@ -52,18 +52,32 @@ namespace TP01
                 if (Console.ReadLine() == "S")
                 {
                     EmpleadoE.PasarTarea(EmpleadoE.TareasPendientes1[h].ID1);
+                    n--;
+                    h--;
                 }
             }
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
             Console.WriteLine("Tareas Realizadas:");
             foreach (Tareas T in EmpleadoE.TareasRealizadas1)
             {
                 T.MostrarTarea();
             }
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
             Console.WriteLine("Tareas Pendientes:");
             foreach (Tareas T in EmpleadoE.TareasPendientes1)
             {
                 T.MostrarTarea();
             }
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
+            Console.WriteLine("Elija una palabra para buscar en las tareas Realizadas:");
+            string palabra = Console.ReadLine();
+            Helper.BusquedaPorPalabra(palabra, EmpleadoE.TareasRealizadas1).MostrarTarea();
+            Console.WriteLine("Elija una palabra para buscar en las tareas Pendientes:");
+            string palabra1 = Console.ReadLine();
+            Helper.BusquedaPorPalabra(palabra1, EmpleadoE.TareasPendientes1).MostrarTarea();
         }
     }
 }
